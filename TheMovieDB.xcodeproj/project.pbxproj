@@ -17,6 +17,11 @@
 		ECA9A15C2BFDA45000E5517C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15B2BFDA45000E5517C /* LoginView.swift */; };
 		ECA9A15E2BFDA46500E5517C /* TheMovieDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15D2BFDA46500E5517C /* TheMovieDB.swift */; };
 		ECA9A1602BFDA47100E5517C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15F2BFDA47100E5517C /* APIClient.swift */; };
+		ECCB21512BFE913700E7DD3B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB21502BFE913700E7DD3B /* ForgotPasswordView.swift */; };
+		ECDEB8022BFDC8DB00BBE402 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEB8012BFDC8DB00BBE402 /* LoginViewViewModel.swift */; };
+		ECDEB8062BFDCA2B00BBE402 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEB8052BFDCA2B00BBE402 /* TLButton.swift */; };
+		ECDEB8082BFDCA8800BBE402 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEB8072BFDCA8800BBE402 /* Header.swift */; };
+		ECDEB80A2BFDE14500BBE402 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEB8092BFDE14500BBE402 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		ECA9A15B2BFDA45000E5517C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ECA9A15D2BFDA46500E5517C /* TheMovieDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDB.swift; sourceTree = "<group>"; };
 		ECA9A15F2BFDA47100E5517C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		ECCB21502BFE913700E7DD3B /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		ECDEB8012BFDC8DB00BBE402 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		ECDEB8052BFDCA2B00BBE402 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		ECDEB8072BFDCA8800BBE402 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		ECDEB8092BFDE14500BBE402 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,10 @@
 			children = (
 				ECA9A1592BFDA43C00E5517C /* SplashView.swift */,
 				ECA9A15B2BFDA45000E5517C /* LoginView.swift */,
+				ECDEB8092BFDE14500BBE402 /* RegisterView.swift */,
+				ECCB21502BFE913700E7DD3B /* ForgotPasswordView.swift */,
+				ECDEB8052BFDCA2B00BBE402 /* TLButton.swift */,
+				ECDEB8072BFDCA8800BBE402 /* Header.swift */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA9A15D2BFDA46500E5517C /* TheMovieDB.swift */,
+				ECDEB8012BFDC8DB00BBE402 /* LoginViewViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,9 +205,14 @@
 				ECA9A15C2BFDA45000E5517C /* LoginView.swift in Sources */,
 				ECA9A14C2BFDA3E800E5517C /* Persistence.swift in Sources */,
 				ECA9A1452BFDA3E600E5517C /* ContentView.swift in Sources */,
+				ECDEB8082BFDCA8800BBE402 /* Header.swift in Sources */,
 				ECA9A1602BFDA47100E5517C /* APIClient.swift in Sources */,
+				ECDEB8062BFDCA2B00BBE402 /* TLButton.swift in Sources */,
+				ECDEB8022BFDC8DB00BBE402 /* LoginViewViewModel.swift in Sources */,
 				ECA9A15A2BFDA43C00E5517C /* SplashView.swift in Sources */,
+				ECCB21512BFE913700E7DD3B /* ForgotPasswordView.swift in Sources */,
 				ECA9A15E2BFDA46500E5517C /* TheMovieDB.swift in Sources */,
+				ECDEB80A2BFDE14500BBE402 /* RegisterView.swift in Sources */,
 				ECA9A14F2BFDA3E800E5517C /* TheMovieDB.xcdatamodeld in Sources */,
 				ECA9A1432BFDA3E600E5517C /* TheMovieDBApp.swift in Sources */,
 			);
@@ -333,6 +353,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +382,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

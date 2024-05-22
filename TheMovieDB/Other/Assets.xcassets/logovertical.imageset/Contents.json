@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Captura_de_pantalla_2024-05-22_a_la_s__12.03.26_a.m.-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,70 @@
+//
+//  ForgotPasswordView.swift
+//  TheMovieDB
+//
+//  Created by Eduardo Geovanni Pérez Munguía on 22/05/24.
+//
+
+import SwiftUI
+
+struct ForgotPasswordView: View {
+    @ObservedObject var viewModel: LoginViewViewModel
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.black, .purple]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("FORGOT PASSWORD")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                        .padding(.top, 90)
+                        .frame(alignment: .center)
+                    
+                    Image("image") // Replace "your_logo" with the name of your image asset
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150, height: 150) // Adjust size as needed
+                    
+                        .padding()
+                        .padding()
+                    TextField("Enter your email", text: $viewModel.forgotPasswordEmail)
+                        .padding()
+                        .background(Color.white.opacity(0.5))
+                        .cornerRadius(10)
+                        .autocapitalization(.none)
+                    
+                    if !viewModel.forgotPasswordErrorMessage.isEmpty {
+                        Text(viewModel.forgotPasswordErrorMessage)
+                            .foregroundColor(Color.red)
+                    }
+                    
+                    TLButton(
+                        title: "Reset Password",
+                        background: .white,
+                        action: {
+                            viewModel.forgotPassword()
+                        },
+                        width: 300,
+                        height: 40
+                    )
+                    .padding()
+                    
+                    if viewModel.isForgotPasswordSuccess {
+                        Text("Password reset email sent successfully.")
+                            .foregroundColor(Color.green)
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+#Preview {
+    ForgotPasswordView(viewModel: LoginViewViewModel())
+}

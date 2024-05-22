@@ -1,14 +1,13 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  TheMovieDB
 //
-//  Created by Eduardo Geovanni Pérez Munguía on 21/05/24.
+//  Created by Eduardo Geovanni Pérez Munguía on 22/05/24.
 //
 
 import SwiftUI
 
-struct LoginView: View {
-    
+struct RegisterView: View {
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
@@ -19,23 +18,32 @@ struct LoginView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    // HEADER WITH LOGO
+                    // HEADER WITH LOGO AND TITLE
                     VStack {
-                        Image("logovertical") // Use the name of your image asset here
+                        Image("logovertical")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 300, height: 200) // Adjust the size as needed
-                            .padding(.top, 5) // Adjust the padding as needed
+                            .frame(width: 300, height: 200)
+                            .padding(.top, 50) // Adjust the padding as needed
+                        
+                        Text("REGISTER")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.top, 10) // Adjust the padding as needed
+                        
+                        Text("Start to Watch Movies")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(.top, 0) // Adjust the padding as needed
                     }
-                    .padding(.bottom, 50)
                     
-                    // LOGIN FORM
                     VStack(spacing: 20) {
                         
-                        if !viewModel.errorMessage.isEmpty {
-                            Text(viewModel.errorMessage)
-                                .foregroundColor(Color.red)
-                        }
+                        TextField("Full Name", text: $viewModel.name)
+                            .padding()
+                            .background(Color.white.opacity(0.5))
+                            .cornerRadius(10)
                         
                         TextField("Email Address", text: $viewModel.email)
                             .padding()
@@ -49,40 +57,26 @@ struct LoginView: View {
                             .cornerRadius(10)
                         
                         TLButton(
-                            title: "Log In",
+                            title: "Create Account",
                             background: .white,
                             action: {
-                                viewModel.login()
+                                viewModel.register()
                             },
                             width: 300, // Specify width
                             height: 40 // Specify height
                         )
                         .padding()
-                        
-                        NavigationLink("Forgot Password?", destination: ForgotPasswordView(viewModel: viewModel))
-                            .foregroundColor(.gray)
                     }
                     .padding()
-                    .background(Color.white.opacity(0.0))
-                    .cornerRadius(10)
-                    .offset(y: -50)
-                    
-                    // CREATE ACCOUNT
-                    VStack {
-                        Text("New around here?")
-                            .foregroundColor(.white)
-                        
-                        NavigationLink("Create An Account", destination: RegisterView())
-                            .foregroundColor(.gray)
-                    }
-                    .padding(.bottom, 50)
                 }
-                .padding()
+                .offset(y: -50)
+                
+                Spacer()
             }
         }
     }
 }
 
 #Preview {
-    LoginView()
+    RegisterView()
 }
