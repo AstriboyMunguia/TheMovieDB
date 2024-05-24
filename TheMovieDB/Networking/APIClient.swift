@@ -45,7 +45,7 @@ class APIClient {
             "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com"
         ]
         
-        var request = URLRequest(url:URL(string: "https://moviesdatabase.p.rapidapi.com/titles?genre=comedy")!, timeoutInterval: Double.infinity)
+        var request = URLRequest(url:URL(string: "https://moviesdatabase.p.rapidapi.com/titles?genre=Comedy")!, timeoutInterval: Double.infinity)
         
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
@@ -57,7 +57,7 @@ class APIClient {
                 }
                 return
             }
-            //print(String(data: data, encoding: .utf8)!)
+          
             do {
                 let result = try JSONDecoder().decode(MovieModel.self, from: data)
                 completion(.success(result))

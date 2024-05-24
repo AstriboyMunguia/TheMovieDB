@@ -31,7 +31,7 @@ class HomeViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case.success(let comedyM):
-                    self.comedyMovies = comedyM.results
+                    self.comedyMovies = comedyM.results 
                     print("Results \(comedyM)")
                 case.failure(let error):
                     print("Error \(error)")

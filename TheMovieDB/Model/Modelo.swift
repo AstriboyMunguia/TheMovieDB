@@ -24,13 +24,13 @@ struct Movies: Codable, Hashable, Identifiable {
     let titleType: TitleType
     let titleText, originalTitleText: TitleText
     let releaseYear: ReleaseYear
-    let releaseDate: ReleaseDate
-    let genres: [String]?
+    let releaseDate: ReleaseDate?
+    
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case resultID = "id"
-        case primaryImage, titleType, titleText, originalTitleText, releaseYear, releaseDate, genres
+        case primaryImage, titleType, titleText, originalTitleText, releaseYear, releaseDate
     }
 }
 
@@ -80,7 +80,7 @@ enum CaptionTypename: String, Codable {
 
 // MARK: - ReleaseDate
 struct ReleaseDate: Codable, Hashable {
-    let day, month, year: Int
+    let day, month, year: Int?
     let typename: ReleaseDateTypename
 
     enum CodingKeys: String, CodingKey {

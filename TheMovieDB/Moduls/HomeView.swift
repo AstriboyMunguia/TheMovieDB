@@ -76,8 +76,9 @@ struct Home: View {
                     .padding(.vertical, -30)
                 
                 ScrollView(showsIndicators: false) {
-                    FirstView(movies: viewModelHome.upcomingMovies ?? [],
-                              comedyMovies: viewModelHome.comedyMovies ?? [])
+                    FirstView(movies: viewModelHome.upcomingMovies ?? [], comedyMovies: viewModelHome.comedyMovies ?? [])
+                    
+                              
                 }
             }
             
@@ -96,6 +97,7 @@ struct Home: View {
         .navigationBarBackButtonHidden(true)
         .onAppear {
             viewModelHome.getUpcomingMovies()
+            viewModelHome.getcomedy()
         }
     }
 }
@@ -121,7 +123,7 @@ struct PerfilPopupView: View {
                         }) {
                             Text("Perfil")
                                 .font(.system(size: 30))
-                                .foregroundColor(.white)
+                                .foregroundColor(.purple)
                                 .padding()
                         }
                         Spacer()
@@ -132,7 +134,7 @@ struct PerfilPopupView: View {
                         }) {
                             Text("Cerrar sesión")
                                 .font(.system(size: 20))
-                                .foregroundColor(.white)
+                                .foregroundColor(.purple)
                                 .padding()
                         }
                     }
@@ -156,7 +158,7 @@ struct FirstView: View {
                 VStack(alignment: .leading) {
                     HorizontalScrollView(title: "UPCOMING", color: .red, movies: movies)
                         .foregroundColor(.white)
-                    HorizontalScrollView(title: "COMEDY", color: .red, movies: movies)
+                    HorizontalScrollView(title: "COMEDY", color: .red, movies: comedyMovies)
                         .foregroundColor(.white)
                 }
                 .padding()
