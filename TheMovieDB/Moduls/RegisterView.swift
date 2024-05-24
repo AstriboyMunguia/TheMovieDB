@@ -27,14 +27,14 @@ struct RegisterView: View {
                             .padding(.top, 50) // Adjust the padding as needed
                         
                         Text("REGISTER")
-                            .font(.largeTitle)
+                            .font(.system(size: 50))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .padding(.top, 10) // Adjust the padding as needed
                         
                         Text("Start to Watch Movies")
-                            .font(.title2)
-                            .foregroundColor(.white)
+                            .font(.system(size: 30))
+                            .foregroundColor(.gray)
                             .padding(.top, 0) // Adjust the padding as needed
                     }
                     

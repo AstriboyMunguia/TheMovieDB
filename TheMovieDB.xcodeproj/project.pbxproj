@@ -17,6 +17,7 @@
 		ECA9A15C2BFDA45000E5517C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15B2BFDA45000E5517C /* LoginView.swift */; };
 		ECA9A15E2BFDA46500E5517C /* TheMovieDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15D2BFDA46500E5517C /* TheMovieDB.swift */; };
 		ECA9A1602BFDA47100E5517C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A15F2BFDA47100E5517C /* APIClient.swift */; };
+		ECB1B9D02C0048F100CF98B1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ECB1B9CF2C0048F100CF98B1 /* FirebaseStorage */; };
 		ECCB21512BFE913700E7DD3B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB21502BFE913700E7DD3B /* ForgotPasswordView.swift */; };
 		ECCB21542BFEB8C300E7DD3B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECCB21532BFEB8C300E7DD3B /* FirebaseAuth */; };
 		ECCB21562BFEB8C300E7DD3B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ECCB21552BFEB8C300E7DD3B /* FirebaseFirestore */; };
@@ -54,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCB21542BFEB8C300E7DD3B /* FirebaseAuth in Frameworks */,
+				ECB1B9D02C0048F100CF98B1 /* FirebaseStorage in Frameworks */,
 				ECCB21562BFEB8C300E7DD3B /* FirebaseFirestore in Frameworks */,
 				ECCB21582BFEB8C300E7DD3B /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -161,6 +163,7 @@
 				ECCB21532BFEB8C300E7DD3B /* FirebaseAuth */,
 				ECCB21552BFEB8C300E7DD3B /* FirebaseFirestore */,
 				ECCB21572BFEB8C300E7DD3B /* FirebaseFirestoreSwift */,
+				ECB1B9CF2C0048F100CF98B1 /* FirebaseStorage */,
 			);
 			productName = TheMovieDB;
 			productReference = ECA9A13F2BFDA3E600E5517C /* TheMovieDB.app */;
@@ -451,6 +454,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ECB1B9CF2C0048F100CF98B1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCB21522BFEB8C300E7DD3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		ECCB21532BFEB8C300E7DD3B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ECCB21522BFEB8C300E7DD3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

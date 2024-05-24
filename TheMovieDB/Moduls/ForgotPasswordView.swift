@@ -16,18 +16,26 @@ struct ForgotPasswordView: View {
                 LinearGradient(gradient: Gradient(colors: [.black, .purple]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text("FORGOT PASSWORD")
-                        .font(.largeTitle)
+                    Text("FORGOT")
+                        .font(.system(size: 50))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top, 0)
+                        .frame(alignment: .center)
+                    
+                    Text("PASSWORD")
+                        .font(.system(size: 30))
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
-                        .padding(.top, 90)
+                        .padding(.top, 0)
                         .frame(alignment: .center)
                     
                     Image("image") // Replace "your_logo" with the name of your image asset
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150, height: 150) // Adjust size as needed
-                    
+                        .padding(.top, -10)
+                        
                         .padding()
                         .padding()
                     TextField("Enter your email", text: $viewModel.forgotPasswordEmail)
